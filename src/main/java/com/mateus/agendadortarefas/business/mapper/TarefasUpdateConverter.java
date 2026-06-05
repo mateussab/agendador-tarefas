@@ -1,6 +1,6 @@
 package com.mateus.agendadortarefas.business.mapper;
 
-import com.mateus.agendadortarefas.business.dto.TarefasDTO;
+import com.mateus.agendadortarefas.business.dto.TarefasDTORecord;
 import com.mateus.agendadortarefas.infrastructure.entity.TarefasEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;
@@ -10,5 +10,5 @@ import org.mapstruct.NullValuePropertyMappingStrategy;
 public interface TarefasUpdateConverter {
 
                                                 //tarefasEntity é o principal caso tarefasDTO seja nulo
-    void updateTarefas(TarefasDTO tarefasDTO, @MappingTarget TarefasEntity tarefasEntity);
+    void updateTarefas(TarefasDTORecord tarefasDTO, @MappingTarget TarefasEntity tarefasEntity);
 }
