@@ -1,6 +1,6 @@
 package com.mateus.agendadortarefas.business.mapper;
 
-import com.mateus.agendadortarefas.business.dto.TarefasDTO;
+import com.mateus.agendadortarefas.business.dto.TarefasDTORecord;
 import com.mateus.agendadortarefas.infrastructure.entity.TarefasEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -11,11 +11,11 @@ import java.util.List;
 public interface TarefasConverter {
 
     @Mapping(source = "id", target = "id")
-    TarefasEntity paraTarefaEntity(TarefasDTO tarefasDTO);
+    TarefasEntity paraTarefaEntity(TarefasDTORecord tarefasDTO);
 
-    TarefasDTO paraTarefaDTO(TarefasEntity tarefasEntity);
+    TarefasDTORecord paraTarefaDTO(TarefasEntity tarefasEntity);
 
-    List<TarefasEntity> paraListaTarefasEntity(List<TarefasDTO> tarefasDTO);
+    List<TarefasEntity> paraListaTarefasEntity(List<TarefasDTORecord> tarefasDTO);
 
-    List<TarefasDTO> paraListaTarefasDTO(List<TarefasEntity> tarefasEntity);
+    List<TarefasDTORecord> paraListaTarefasDTORecord(List<TarefasEntity> tarefasEntity);
 }
